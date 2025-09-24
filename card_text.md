@@ -1,4 +1,4 @@
-# Ground Station Ops – Prototype Card & Component Text
+# Project TLE – Prototype Card & Component Text
 
 ---
 

@@ -4,7 +4,7 @@ Designed by Artur Foden
 Workshop ID: 3574086791
 
 ## 1. Overview
-- **Title:** Ground Station Ops  
+- **Title:** Project TLE 
 - **Genre:** Cooperative, Systems-Engineering Puzzle  
 - **Theme:** Players are mission control operators at a ground station, coordinating satellite passes to complete mission objectives.  
 - **Core Loop:** Draw → Plan → Execute → Assess, over 5 sequential orbital passes.  

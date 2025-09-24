@@ -1,4 +1,4 @@
-# Ground Station Ops – Game Design Document (Prototype v0.2)
+# Ground Station Ops – Game Design Document (Prototype v0.3)
 
 ## 1. Overview
 - **Title:** Ground Station Ops  
@@ -31,18 +31,45 @@
 
 ---
 
-## 4. Communication & Quarterbacking
+## 4. Pre-Game Phase
+At the start of the game, players draw **1 Mission Objective card** and **1 Scenario Modifier card** to set the stage.  
+
+### Mission Objectives Deck
+Defines the **win condition** for the mission. Example cards:  
+1. **Data Relay** – Downlink 3 Data by Orbit 5.  
+2. **Orbit Adjustment** – Perform 1 Maneuver and finish with Orbit Nominal.  
+3. **Payload Operations** – Capture and downlink 2 Data by Orbit 3.  
+4. **System Recovery** – End the game with Comms Online and Battery ≥ 3.  
+5. **Multi-Task** – Perform 1 Maneuver **and** downlink 2 Data.  
+
+### Scenario Modifiers Deck
+Adds **environmental twists** that change rules for all 5 orbits. Example cards:  
+1. **Solar Maximum** – +1 to all Subsystem Event rolls (2–6 more likely, fewer Nominal passes).  
+2. **Extra Slot** – Each orbit has 5 slots instead of 4.  
+3. **Weak Batteries** – Max Battery is 4 (instead of 5).  
+4. **Unreliable Comms** – Add 1 extra Subsystem Event roll each time a Downlink is attempted.  
+5. **Backup Ground Station** – Ignore the first *Ground Station Conflict* event (slot not blocked).  
+
+### Starting State
+- Battery = 3  
+- Orbit = Nominal  
+- Comms = Online  
+- Data Stored = 0  
+
+---
+
+## 5. Communication & Quarterbacking
 - **Hidden Hands:** Players keep their cards hidden from each other.  
 - **Open Talk:** Players may discuss intentions, but cannot show cards.  
 - **Anti-Quarterbacking Rule:**  
-  - Each orbit has 4 slots.  
-  - Each player must contribute at least 1 card if there are enough open slots. 
-  - No player may fill all 4 slots.  
+  - Each orbit has 4 slots (unless modified).  
+  - Each player must fill at least 1 slot per orbit, **unless blocked slots reduce the number of available slots**.  
+  - Players negotiate who contributes if fewer slots are available.  
 - This ensures distributed decision-making while maintaining open communication.  
 
 ---
 
-## 5. Cross-Pass Interactions
+## 6. Cross-Pass Interactions
 - **Definition:** Effects that occur in one pass but influence the **subsystem event rolls** or state in future passes.  
 - **Mechanic:** Certain cards add or modify dice rolls during the **Subsystem Event Phase**, creating delayed consequences.  
 
@@ -53,7 +80,7 @@
 
 ---
 
-## 6. Components
+## 7. Components
 - **Shared Deck (20 cards)**  
   - Solar Charge (x4)  
   - Battery Drain (x2)  
@@ -76,7 +103,10 @@
   - Data Stored (0–3)  
 
 - **Mission Cards**  
-  - Define endgame objectives (e.g., “Downlink 2 Data by Round 3,” “Perform 1 Maneuver before Round 5”).  
+  - Define endgame objectives.  
+
+- **Scenario Modifier Cards**  
+  - Add environmental twists to increase replayability.  
 
 - **Timeline Board (Playmat)**  
   - 5 rows (one per orbit), each with 4 slots.  
@@ -94,7 +124,7 @@
 
 ---
 
-## 7. Gameplay Loop
+## 8. Gameplay Loop
 Each round = 1 orbital pass.
 
 1. **Draw Phase**  
@@ -102,7 +132,7 @@ Each round = 1 orbital pass.
 
 2. **Planning Phase**  
    - Players discuss intentions but cannot reveal cards.  
-   - Each player must commit at least 1 card to the 4 available slots.  
+   - Each player must commit at least 1 card to the available slots.  
    - Cards placed face down into slots.  
 
 3. **Execution Phase**  
@@ -116,7 +146,7 @@ Each round = 1 orbital pass.
 
 ---
 
-## 8. Example Round (Orbit 2)
+## 9. Example Round (Orbit 2)
 - Timeline:  
   1. Solar Charge → Battery +2  
   2. Attitude Change (prep antenna alignment)  
@@ -129,7 +159,7 @@ Each round = 1 orbital pass.
 
 ---
 
-## 9. Future Considerations
+## 10. Future Considerations
 - Expand role decks with multiple unique cards per role.  
 - Test hybrid mechanics where some cards persist across passes.  
 - Introduce scenario-based missions (Earth Observation, Lunar Imaging, Deep Space Probe).  
@@ -138,10 +168,11 @@ Each round = 1 orbital pass.
 
 ---
 
-## 10. Prototype Status
+## 11. Prototype Status
 - Card pool: ~25 total.  
 - Player count: 2–4.  
 - Rounds: 5.  
-- Timeline = 4 slots/orbit.  
+- Timeline = 4 slots/orbit (unless modified).  
 - Blocked slots determined by d6 event + 1d4 roll.  
-- System ready for **paper playtest** to validate adjacency, slot blocking, and cross-pass interactions.  
+- Mission objectives and modifiers determined pre-game.  
+- System ready for **paper playtest** to validate adjacency, slot blocking, cross-pass interactions, and scenario setup.  

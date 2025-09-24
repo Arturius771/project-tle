@@ -1,4 +1,4 @@
-# Ground Station Ops – Game Design Document (Prototype v0.3)
+# Ground Station Ops – Game Design Document (Prototype v0.4)
 
 ## 1. Overview
 - **Title:** Ground Station Ops  
@@ -9,7 +9,7 @@
 ---
 
 ## 2. Objectives
-- **Primary Goal:** Complete mission objectives (e.g., downlink data, perform maneuvers) before the end of Round 5.  
+- **Primary Goal:** Complete mission objectives before the end of Round 5.  
 - **Failure States:**  
   - Battery reduced to 0.  
   - Comms permanently offline.  
@@ -32,17 +32,18 @@
 ---
 
 ## 4. Pre-Game Phase
-At the start of the game, players draw **1 Mission Objective card** and **1 Scenario Modifier card** to set the stage.  
+At the start of the game, players draw **1 Mission Objective card** to define the win condition. Optionally, draw **1 Scenario Modifier card** to add difficulty or variety.  
 
 ### Mission Objectives Deck
-Defines the **win condition** for the mission. Example cards:  
-1. **Data Relay** – Downlink 3 Data by Orbit 5.  
-2. **Orbit Adjustment** – Perform 1 Maneuver and finish with Orbit Nominal.  
-3. **Payload Operations** – Capture and downlink 2 Data by Orbit 3.  
-4. **System Recovery** – End the game with Comms Online and Battery ≥ 3.  
-5. **Multi-Task** – Perform 1 Maneuver **and** downlink 2 Data.  
+All missions require **multiple tasks** to be completed. Difficulty is noted for balance and replayability.  
 
-### Scenario Modifiers Deck
+1. **Quick Science** *(Easy)* – Capture and downlink 2 Data **by Orbit 3**.  
+2. **Sustained Ops** *(Easy)* – Downlink 2 Data and finish with Battery ≥ 3.  
+3. **Orbit Adjustment** *(Medium)* – Perform 1 Maneuver and downlink 2 Data.  
+4. **System Recovery** *(Medium)* – Restore Comms from an Offline state at least once, and finish with Orbit Nominal.  
+5. **Full Mission Success** *(Hard)* – Downlink 3 Data, perform 1 Maneuver, and finish with Comms Online.  
+
+### Scenario Modifiers Deck (Optional)
 Adds **environmental twists** that change rules for all 5 orbits. Example cards:  
 1. **Solar Maximum** – +1 to all Subsystem Event rolls (2–6 more likely, fewer Nominal passes).  
 2. **Extra Slot** – Each orbit has 5 slots instead of 4.  
@@ -103,9 +104,9 @@ Adds **environmental twists** that change rules for all 5 orbits. Example cards:
   - Data Stored (0–3)  
 
 - **Mission Cards**  
-  - Define endgame objectives.  
+  - Define multi-task win conditions.  
 
-- **Scenario Modifier Cards**  
+- **Scenario Modifier Cards (Optional)**  
   - Add environmental twists to increase replayability.  
 
 - **Timeline Board (Playmat)**  
@@ -174,5 +175,6 @@ Each round = 1 orbital pass.
 - Rounds: 5.  
 - Timeline = 4 slots/orbit (unless modified).  
 - Blocked slots determined by d6 event + 1d4 roll.  
-- Mission objectives and modifiers determined pre-game.  
+- Mission objectives multi-task (easy → hard).  
+- Scenario modifiers optional.  
 - System ready for **paper playtest** to validate adjacency, slot blocking, cross-pass interactions, and scenario setup.  

@@ -1,4 +1,5 @@
-# Ground Station Ops – Game Design Document (Prototype v0.4)
+# Project TLE – Game Design Document (Prototype v0.4)
+Designed by Artur Foden
 
 ## 1. Overview
 - **Title:** Ground Station Ops  
@@ -51,7 +52,7 @@ Adds **environmental twists** that change rules for all 5 orbits. Example cards:
 4. **Unreliable Comms** – Add 1 extra Subsystem Event roll each time a Downlink is attempted.  
 5. **Backup Ground Station** – Ignore the first *Ground Station Conflict* event (slot not blocked).  
 
-### Starting State
+### Subsystem Starting State
 - Battery = 3  
 - Orbit = Nominal  
 - Comms = Online  
@@ -97,7 +98,7 @@ Adds **environmental twists** that change rules for all 5 orbits. Example cards:
   - Flight Dynamics Officer: Precision Burn  
   - Payload Officer: Science Burst  
 
-- **State Board**  
+- **Subsystem State Board**  
   - Battery (0–5)  
   - Orbit Stability (Nominal / Off-Nominal)  
   - Comms (Online / Offline)  

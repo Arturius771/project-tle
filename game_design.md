@@ -1,5 +1,7 @@
-# Project TLE – Game Design Document (Prototype v0.4)
+# Project TLE – Game Design Document (Prototype v0.5)
 Designed by Artur Foden
+
+Workshop ID: 3574086791
 
 ## 1. Overview
 - **Title:** Ground Station Ops  
@@ -12,10 +14,7 @@ Designed by Artur Foden
 ## 2. Objectives
 - **Primary Goal:** Complete mission objectives before the end of Round 5.  
 - **Failure States:**  
-  - Battery reduced to 0.  
-  - Comms permanently offline.  
-  - Subsystem failures exceed threshold (e.g., 3).  
-  - Mission objectives not completed by end of Round 5.  
+See card_text.md
 
 ---
 
@@ -37,20 +36,11 @@ At the start of the game, players draw **1 Mission Objective card** to define th
 
 ### Mission Objectives Deck
 All missions require **multiple tasks** to be completed. Difficulty is noted for balance and replayability.  
-
-1. **Quick Science** *(Easy)* – Capture and downlink 2 Data **by Orbit 3**.  
-2. **Sustained Ops** *(Easy)* – Downlink 2 Data and finish with Battery ≥ 3.  
-3. **Orbit Adjustment** *(Medium)* – Perform 1 Maneuver and downlink 2 Data.  
-4. **System Recovery** *(Medium)* – Restore Comms from an Offline state at least once, and finish with Orbit Nominal.  
-5. **Full Mission Success** *(Hard)* – Downlink 3 Data, perform 1 Maneuver, and finish with Comms Online.  
+See card_text.md
 
 ### Scenario Modifiers Deck (Optional)
-Adds **environmental twists** that change rules for all 5 orbits. Example cards:  
-1. **Solar Maximum** – +1 to all Subsystem Event rolls (2–6 more likely, fewer Nominal passes).  
-2. **Extra Slot** – Each orbit has 5 slots instead of 4.  
-3. **Weak Batteries** – Max Battery is 4 (instead of 5).  
-4. **Unreliable Comms** – Add 1 extra Subsystem Event roll each time a Downlink is attempted.  
-5. **Backup Ground Station** – Ignore the first *Ground Station Conflict* event (slot not blocked).  
+Adds **environmental twists** that change rules for all 5 orbits.  
+See card_text.md
 
 ### Subsystem Starting State
 - Battery = 3  
@@ -84,19 +74,10 @@ Adds **environmental twists** that change rules for all 5 orbits. Example cards:
 
 ## 7. Components
 - **Shared Deck (20 cards)**  
-  - Solar Charge (x4)  
-  - Battery Drain (x2)  
-  - Data Capture (x3)  
-  - Downlink (x3)  
-  - Maneuver Burn (x2)  
-  - Attitude Change (x2)  
-  - Command Uplink (x2)  
+See card_text.md
 
 - **Role Decks (1 unique card each per player)**  
-  - Comms Officer: High-Gain Pass  
-  - Power Engineer: Battery Recondition  
-  - Flight Dynamics Officer: Precision Burn  
-  - Payload Officer: Science Burst  
+See card_text.md
 
 - **Subsystem State Board**  
   - Battery (0–5)  
@@ -117,14 +98,9 @@ Adds **environmental twists** that change rules for all 5 orbits. Example cards:
   - Blocked slot = cannot be filled this orbit (mark with “X”).  
 
 - **Subsystem Event Table (d6)**  
-  1. Eclipse → Battery -1  
-  2. Solar Flare → Comms Offline next round  
-  3. Gyro Drift → Orbit Off-Nominal  
-  4. Nominal pass → No effect  
-  5. Payload Glitch → Lose 1 stored data  
-  6. Ground Station Conflict → Roll 1d4; block that slot next round  
+See card_text.md
 
----
+--- 
 
 ## 8. Gameplay Loop
 Each round = 1 orbital pass.
@@ -140,8 +116,10 @@ Each round = 1 orbital pass.
 3. **Execution Phase**  
    - Reveal and resolve cards left-to-right.  
    - Apply adjacency rules and update spacecraft state.  
+   - **Apply all Reveal Effects immediately when each card is flipped.**  
 
 4. **Assessment Phase**  
+   - Battery -1 (end-of-round drain).  
    - Roll subsystem event(s).  
    - Apply cross-pass effects (e.g., additional die rolls, blocked slots).  
    - Check mission progress and failure conditions.  

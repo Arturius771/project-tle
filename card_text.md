@@ -80,9 +80,9 @@
 | Subsystem      | Failure Condition                                                     | Notes                                                                                   |
 | -------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | **Battery**    | Battery reaches **0**                                                 | Immediate mission failure (satellite unpowered).                                        |
-| **Comms**      | Comms are **Offline at the end of any orbit**                         | Mission failure (permanent loss of contact).                                            |
-| **Orbit**      | Orbit remains **Off-Nominal** at end of game if objective requires it | Only matters if the Mission Objective specifies Nominal orbit at mission end.           |
-| **Payload**    | Required Data cannot be captured or downlinked to meet objectives     | Not an instant fail; only causes mission failure if the data objective becomes impossible. |
+| **Comms**      | Comms are **offline**                                                 | Mission failure if offline at end of orbit (permanent loss of contact).                 |
+| **Orbit**      | Orbit remains **Off-Nominal**                                         | Only matters if the Mission Objective specifies Nominal orbit at mission end.           |
+| **Payload**    | Required Data cannot has not been downlinked                          | Not an instant fail; only causes mission failure if the data objective becomes impossible. |
 
 ---
 

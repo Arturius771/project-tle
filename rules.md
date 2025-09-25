@@ -107,8 +107,17 @@ Your mission fails immediately if:
 
 - **Battery = 0** → Satellite unpowered.  
 - **Comms Offline at end of orbit** → Lost contact.  
-- **3 or more Subsystem Failures** → Too many irrecoverable issues.  
+- **3 or more Subsystem Failures at end of orbit** → Too many irrecoverable issues.  
 - **Mission Objectives not complete by end of Orbit 5** → Deadline missed.  
+
+### Subsystem Failures
+
+| Subsystem      | Failure Condition                                                     | Notes                                                                                   |
+| -------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| **Battery**    | Battery reaches **0**                                                 | Immediate mission failure (satellite unpowered).                                        |
+| **Comms**      | Comms are **offline**                                                 | Mission failure if offline at end of orbit (permanent loss of contact).                 |
+| **Orbit**      | Orbit remains **Off-Nominal**                                         | Only matters if the Mission Objective specifies Nominal orbit at mission end.           |
+| **Payload**    | Required Data cannot has not been downlinked                          | Not an instant fail; only causes mission failure if the data objective becomes impossible. |
 
 ---
 

@@ -21,9 +21,9 @@
 | Role                      | Card Name (TLE)     | Effect                                                        | Conditions                                                | Reveal Effect                                                                      |
 | ------------------------- | ------------------- | ------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | **Comms Officer**         | High-Gain Pass      | Downlink 2 Data **per Data Stored**; costs -1 Battery         | Must follow **Data Capture**                              | If Battery ≤ 2 → Comms go Offline.                                                |
-| **Power Engineer**        | Battery Recondition | Reset Battery to exactly 3                                    | Must not precede **Maneuver Burn**                        | If Battery is already 3 → discard and draw 1.                                     |
+| **Power Engineer**        | Battery Recondition | Reset Battery to exactly 3                                    | Must not precede **Maneuver Burn**                        | If Battery is already 3 → turn over and draw 1.                                   |
 | **Flight Dynamics Officer** | Precision Burn    | Restore Orbit to Nominal without Battery cost                 | Must follow **Attitude Change**                           | If Orbit is already Nominal → wasted slot.                                        |
-| **Payload Officer**       | Science Burst       | Capture 2 Data in one slot; costs -1 Battery                  | Requires **Comms Online**; Must be followed within 2 slots by **Downlink** | If Battery ≤ 1 → Payload Glitch (lose 1 Data Stored).                             |
+| **Payload Officer**       | Science Burst       | Capture 2 Data in one slot; costs -1 Battery                  | Requires **Comms Online**; Must be followed within 2 slots by **Downlink** | If Battery ≤ 1 → Payload Glitch (lose 1 Data Stored).             |
 
 ---
 

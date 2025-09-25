@@ -8,7 +8,7 @@
 | ------------------- | ----- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | **Solar Charge**    | 4     | +2 Battery (max 5)                                                                      | Must not precede **Downlink**                                                                    | If Battery already at 5 → energy wasted (no effect).                                             |
 | **Power Load Shedding**| 2  | +1 Battery                                                                              | Must follow a **Command Uplink**                                                                 | If Battery ≤ 1 → Comms go Offline. -1 Battery                                                    |
-| **Data Capture**    | 3     | +1 Data Stored (max 3)                                                                  | Requires **Comms Online**; Must be followed within 2 slots by **Downlink**                       | If Comms go Offline before Downlink → all stored Data lost.                                      |
+| **Data Capture**    | 3     | +1 Data Stored (max 3)                                                                  | Requires **Comms Online**; Must be followed within 2 slots by **Downlink** or **High Gain Pass** | If Comms go Offline before Downlink → all stored Data lost.                                      |
 | **Downlink**        | 3     | Send 1 Data to Mission Objective                                                        | Must follow **Data Capture** (within 2 slots); Must not precede **Maneuver Burn**                | If attempted with Comms Offline → wasted slot and Battery -1.                                    |
 | **Maneuver Burn**   | 2     | -1 Battery; If Orbit Off-Nominal → restore to Nominal, else counts as Maneuver performed| Must follow **Attitude Change**; Must not precede **Solar Charge**                               | If Battery ≤ 1 → Orbit becomes Off-Nominal (thruster misfire).                                   |
 | **Attitude Change** | 3     | +1 Data to a following **Downlink** OR allows a **Maneuver Burn**                       | Must be followed by **Maneuver Burn** or **Downlink**                                            | If not followed by a valid card → wasted slot.                                                   |
@@ -82,7 +82,7 @@
 | **Battery**    | Battery reaches **0**                                                 | Immediate mission failure (satellite unpowered).                                        |
 | **Comms**      | Comms are **offline**                                                 | Mission failure if offline at end of orbit (permanent loss of contact).                 |
 | **Orbit**      | Orbit remains **Off-Nominal**                                         | Only matters if the Mission Objective specifies Nominal orbit at mission end.           |
-| **Payload**    | Required Data cannot has not been downlinked                          | Not an instant fail; only causes mission failure if the data objective becomes impossible. |
+| **Payload**    | Stored data >= 1                                                      | Not an instant fail; only causes mission failure if the data objective becomes impossible. |
 
 ---
 

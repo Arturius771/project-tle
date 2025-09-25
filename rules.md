@@ -117,7 +117,7 @@ Your mission fails immediately if:
 | **Battery**    | Battery reaches **0**                                                 | Immediate mission failure (satellite unpowered).                                        |
 | **Comms**      | Comms are **offline**                                                 | Mission failure if offline at end of orbit (permanent loss of contact).                 |
 | **Orbit**      | Orbit remains **Off-Nominal**                                         | Only matters if the Mission Objective specifies Nominal orbit at mission end.           |
-| **Payload**    | Required Data cannot has not been downlinked                          | Not an instant fail; only causes mission failure if the data objective becomes impossible. |
+| **Payload**    | Stored data >= 1                                                      | Not an instant fail; only causes mission failure if the data objective becomes impossible. |
 
 ---
 

@@ -24,10 +24,19 @@ See card_text.md
 - Previous rounds influence the spacecraft state (battery, comms, orbit), but cards do not persist physically across rounds.  
 - **Rationale:** Easier to prototype and test adjacency mechanics, while still allowing cascading consequences via state tracking.  
 
-### Persistent Timeline (Deferred Option)
+#### Persistent Timeline (Deferred Option)
 - Alternative approach where cards persist across all rounds, creating a cumulative programming schedule.  
 - More authentic to systems engineering but more complex and prone to analysis paralysis.  
 - Reserved for later design iterations.  
+
+### Campaign & Role Structure
+We have decided to expand Ground Station Ops into a campaign-style lifecycle game rather than a one-shot orbital puzzle. The game now follows the satellite from design and launch, through operations, to end-of-life, with each phase introducing distinct objectives and hazards. The core TLE timeline mechanic remains the shared programming challenge, but each player also manages a role-specific subsystem minigame (e.g., Power Engineer, Comms Officer), giving them asymmetric abilities, hidden information, and unique decision spaces. This both reinforces anti-quarterbacking principles and injects systems-engineering flavor into play. To increase variety and escalation, subsystem event results can now create lingering hazard tokens, forcing the team to balance immediate actions against accumulating long-term risks.
+
+### Mission Control Desks & Hidden State
+Subsystem responsibility is now represented as dedicated mission control desks, where each player privately monitors the state of a subsystem (Power, Comms, Orbit/Attitude, Payload). The exact state of each subsystem is hidden information, known only to the assigned player, who must communicate status and risks back to the team. This structure simulates the real dynamics of mission control operations: controllers interpret telemetry, report selectively, and influence whether timeline actions (TLE cards) succeed. It reinforces role identity, prevents quarterbacking, and adds tension by forcing the crew to collaborate under uncertainty, mirroring authentic systems engineering workflows.
+
+### Granular Subsystem States
+Subsystems now progress along a four-step health track (Better than Expected → Nominal → Failing → Failed), instead of simple binary states. This increases nuance in play, as “Failing” systems apply penalties before they collapse, while “Better than Expected” systems grant performance boosts. The satellite design phase influences the starting state of each subsystem, reinforcing systems-engineering tradeoffs. Mission failure still occurs if too many subsystems reach Failed, but degraded states create escalating tension and force controllers to balance recovery actions against mission tasks.
 
 ---
 
